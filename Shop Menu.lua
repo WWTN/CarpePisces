@@ -5,7 +5,7 @@ function ShopLoad()
     ItemLoad()
     
     shop = {}
-    shop.sellButton = love.graphics.newImage("ShopInterface/Buttons/SellButton.png")
+    shop.sellButton = love.graphics.newImage("ShopInterface/Buttons/Sell Button.png")
     shop.sellButtonHighlight = love.graphics.newImage("ShopInterface/Buttons/Sell Button Highlight.png")
     shop.purchaseButton = love.graphics.newImage("ShopInterface/Buttons/PurchaseButton.png")
     shop.purchaseButtonHighlight = love.graphics.newImage("ShopInterface/Buttons/Purchase Button Highlight.png")
