@@ -5,7 +5,7 @@ function love.load()
 end
 
 function love.update()
-ShopUpdate()
+    ShopUpdate()
 end
 
 function love.draw()
