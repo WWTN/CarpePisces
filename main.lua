@@ -1,11 +1,15 @@
 require "Shop Menu"
-require "Items List"
-require "Player"
 
 function love.load()
     currency = '¬'
     PlayerLoad()
     ShopLoad()
+end
+
+function love.keyreleased(key)
+    if key == "escape" then
+        love.event.quit()
+    end
 end
 
 function love.update()

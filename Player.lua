@@ -1,11 +1,21 @@
 function PlayerLoad()
     player = {}
     player.currentHealth = 100
-    player.maxHealth = 200
+    player.maxHealth = 500
     player.money = 1000
+    player.isAlive = true
 end
 
 function PlayerUpdate()
+    if player.money <= 0 then
+        player.money = 0
+        player.currentHealth = player.currentHealth
+    end
+
+    if player.currentHealth == 0 then
+        player.isAlive = false 
+    end
+
     if player.currentHealth > player.maxHealth then
         player.currentHealth = player.maxHealth
     end
