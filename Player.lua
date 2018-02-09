@@ -23,6 +23,6 @@ end
 
 function PlayerDraw()
     love.graphics.print("Demon Dollars: " .. currency .. player.money, 30, 10)
-    love.graphics.print("Health: " .. player.currentHealth .. '/' .. player.maxHealth, 400, 10)
+    love.graphics.print("Health: " .. player.currentHealth .. '/' .. player.maxHealth, 450, 10)
 
 end

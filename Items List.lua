@@ -115,17 +115,22 @@ function ItemSelection()
             item.mediumPotionSelected = false
             item.largePotionSelected = false
             item.medicalHerbsSelected = true
-        end
-    end
+      end
+   end
 
-    if love.mouse.isDown(1) then
+--[[
+     if love.mouse.isDown(1) then
         if mouseOverItem1 == false and mouseOverItem2 == false and mouseOverItem3 == false and mouseOverItem4 == false then
             item.image = item.blankImage
             item.descriptionImage = item.blankDescriptionImage
+            item.smallPotionSelected = false
+            item.mediumPotionSelected = false
+            item.largePotionSelected = false
+            item.medicalHerbsSelected = false
         end
-    end
+    end]]
 
-    if item.imageClickShow == false and mouseOverItem1 == false and mouseOverItem2 == false and mouseOverItem3 == false  and mouseOverItem4 == false then
+    if mouseOverItem1 == false and mouseOverItem2 == false and mouseOverItem3 == false  and mouseOverItem4 == false then
         if item.smallPotionSelected == true then
             item.image = item.smallPotionImage
             item.descriptionImage = item.smallDescription
