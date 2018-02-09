@@ -1,5 +1,6 @@
 function PlayerLoad()
     player = {}
+    
     player.currentHealth = 100
     player.maxHealth = 500
     player.money = 1000
