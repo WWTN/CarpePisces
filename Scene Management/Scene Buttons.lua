@@ -13,7 +13,7 @@ function SceneButtonsLoad()
     sb.btnWidth = 204 * 0.65
     sb.btnHeight = 105 * 0.65
 
-    shopOpen = true 
+    shopOpen = false 
 end
 
 
