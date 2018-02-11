@@ -3,11 +3,11 @@ function PlayerLoad()
     
     player.currentHealth = 250
     player.maxHealth = 500
-    player.healthX  = 802
+    player.healthX  = 850
     player.healthY = 180
 
     player.money = 1000
-    player.moneyPosX = 802
+    player.moneyPosX = 830
     player.moneyPosY = 200
     player.isAlive = true
 end
@@ -15,7 +15,8 @@ end
 function PlayerUpdate()
     if player.money <= 0 then
         player.money = 0
-        player.currentHealth = player.currentHealth
+    elseif player.money >= 9999 then
+        player.money = 9999
     end
 
     if player.currentHealth == 0 then
@@ -27,22 +28,8 @@ function PlayerUpdate()
     end
 end
 
-function PlayerDraw()
-    love.graphics.setBackgroundColor(0,0,0,0)
-
-    if sb.shopOpen == true then
-        player.healthX = 450
-        player.healthY = 10
-        player.moneyPosX = 30
-        player.moneyPosY = 10   
-    else
-        player.moneyPosX = 802
-        player.moneyPosY = 200
-        player.healthX  = 802
-        player.healthY = 180
-    end
-    
-    love.graphics.setColor(198,24,0, 255)
+function PlayerDraw()    
+    love.graphics.setColor(216,55,1,255)
     love.graphics.print("Demon Dollars: " .. currency .. player.money, player.moneyPosX, player.moneyPosY)
 
     if player.currentHealth < player.maxHealth / 3 then

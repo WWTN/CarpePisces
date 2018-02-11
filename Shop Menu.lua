@@ -31,7 +31,7 @@ end
 
 function love.mousereleased(x, y, button)
     if button == 1 then
-        if shop.purchaseHighlight == true then 
+        if shop.purchaseHighlight == true and player.money ~= 0 then 
             if item.smallPotionSelected == true then
                 player.currentHealth = player.currentHealth + 10
                 player.money = player.money - item.smallPotionCost
@@ -48,7 +48,7 @@ function love.mousereleased(x, y, button)
         end
 
         if shop.exitHighlight == true then
-            sb.shopOpen = false
+            shopOpen = false
         end
     end
 end
@@ -83,6 +83,12 @@ function ButtonHighlighting()
 end
 
 function ShopDraw()
+    -- Player UI
+    player.healthX = 450
+    player.healthY = 10
+    player.moneyPosX = 30
+    player.moneyPosY = 10 
+
     if shop.sellHighlight == true then
         love.graphics.draw(shop.sellButtonHighlight, shop.sellButtonX, shop.sellButtonY, 0, 0.5, 0.5)
     else

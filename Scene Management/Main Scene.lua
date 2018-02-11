@@ -16,6 +16,5 @@ function MainSceneUpdate()
 end
 
 function MainSceneDraw()
-    love.graphics.setColor(200,200,200,255)
     love.graphics.draw(mainScene.hallwayScene, mainScene.x, mainScene.y, 0, 1, 0.9)
 end

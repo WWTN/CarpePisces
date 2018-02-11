@@ -21,13 +21,14 @@ function love.update()
 end
 
 function love.draw()
-    love.graphics.setBackgroundColor(128,128,208,255)
+    --love.graphics.setBackgroundColor(128,128,208,255)
 
-    if sb.shopOpen == true then
+    if shopOpen == true then
         ShopDraw()
     else
         SceneDraw()
     end
     PlayerDraw()
+    love.graphics.setBackgroundColor(52,46,58,16)
 end
 
