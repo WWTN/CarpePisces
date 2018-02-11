@@ -12,7 +12,6 @@ end
 
 function SceneUpdate()
     MainSceneUpdate()
-    SceneButtonsUpdate()
 end
 
 function SceneDraw()

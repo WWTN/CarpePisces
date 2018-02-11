@@ -25,33 +25,10 @@ function ShopLoad()
     shop.purchaseButtonX = 200
     shop.purchaseButtonY = 475
 
-    shop.buttonHeight = 52.5
-    shop.buttonWidth = 150
+    shop.buttonHeight = 105 * 0.5
+    shop.buttonWidth = 300 * 0.5
 end
 
-function love.mousereleased(x, y, button)
-    if button == 1 then
-        if shop.purchaseHighlight == true and player.money ~= 0 then 
-            if item.smallPotionSelected == true then
-                player.currentHealth = player.currentHealth + 10
-                player.money = player.money - item.smallPotionCost
-            elseif item.mediumPotionSelected == true then
-                player.currentHealth = player.currentHealth + 25
-                player.money = player.money - item.mediumPotionCost
-            elseif item.largePotionSelected == true then
-                player.currentHealth = player.currentHealth + 50
-                player.money = player.money - item.largePotionCost
-            elseif item.medicalHerbsSelected == true then
-                player.currentHealth = player.currentHealth + math.random(-200, 200)
-                player.money = player.money - item.medicalHerbsCost
-            end
-        end
-
-        if shop.exitHighlight == true then
-            shopOpen = false
-        end
-    end
-end
 
 function ShopUpdate()
     ButtonHighlighting()
