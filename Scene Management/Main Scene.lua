@@ -3,12 +3,14 @@ function MainSceneLoad()
     mainScene = {}
 
     mainScene.hallwayScene = love.graphics.newImage("Scene Management/Images/Background/hallway_background.jpg")
+    mainScene.monsterHallwayScene = love.graphics.newImage("Scene Management/Images/Background/hallway_2_for_video.jpg")
     mainScene.scene = mainScene.hallwayScene
 
     mainScene.x = 0
     mainScene.y = 0
     mainScene.width = 400
     mainScene.height = 400
+
 end
 
 function MainSceneUpdate()

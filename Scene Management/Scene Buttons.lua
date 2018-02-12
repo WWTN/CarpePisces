@@ -15,15 +15,26 @@ function SceneButtonsLoad()
 
     shopOpen = false 
 end
-
+function
 
 function SceneButtonsDraw()
     for i = 0, 2 do
         love.graphics.draw(sb.buttonImg, sb.actionBtnX + (5 + sb.btnWidth) * i, sb.actionBtnY, 0, 0.65, 0.65)
         
+        text = "ACTION"
+        if doorClicked == true then
+            if i == 0 then
+                text = "Enter"
+            elseif i == 1 then
+                text = "Close"
+            elseif i == 2 then
+                text = "Look At"
+            end
+        end
+
         love.graphics.setNewFont(25)
         love.graphics.setColor(0,0,0,255)
-        love.graphics.print("ACTION", sb.actionBtnX + (5 + sb.btnWidth) * i + sb.btnWidth*1/7, sb.actionBtnY + sb.btnHeight*1/3)
+        love.graphics.print(text, sb.actionBtnX + (5 + sb.btnWidth) * i + sb.btnWidth*1/7, sb.actionBtnY + sb.btnHeight*1/3)
         love.graphics.setColor(255,255,255,255)
         love.graphics.setNewFont(15)
     end

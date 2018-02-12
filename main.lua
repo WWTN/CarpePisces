@@ -1,4 +1,4 @@
-require "Shop Menu"
+require "Shop Interface/Shop Menu"
 require "Scene Management/Scene"
 
 function love.load()
@@ -36,6 +36,17 @@ function love.mousereleased(x, y, button)
         if shop.exitHighlight == true then
             shopOpen = false
         end
+
+        if x > 202 and x < 202 + 146 and y > 99 and y < 99 + 397 * 0.9 then
+            doorClicked = true
+        end
+
+        if doorClicked == true then
+            if text == "Enter" then
+                mainScene.scene = mainScene.monsterHallwayScene
+            end
+        end
+                
     end
     
     

@@ -1,28 +1,28 @@
 function ItemLoad()
     item = {}
     
-    item.blankDescriptionImage = love.graphics.newImage("ShopInterface/Shop_Interface/ItemDescription.png")
-    item.smallDescription = love.graphics.newImage("ShopInterface/Shop_Interface/ItemDiscrSmall.png")
-    item.mediumDescription = love.graphics.newImage("ShopInterface/Shop_Interface/ItemDiscrMed.png")
-    item.largeDescription = love.graphics.newImage("ShopInterface/Shop_Interface/ItemDiscrLarge.png")
-    item.medicalHerbsDescription = love.graphics.newImage("ShopInterface/Shop_Interface/ItemDiscrMedicinalH.png")
+    item.blankDescriptionImage = love.graphics.newImage("Shop Interface/Shop_Interface__Images/ItemDescription.png")
+    item.smallDescription = love.graphics.newImage("Shop Interface/Shop_Interface__Images/ItemDiscrSmall.png")
+    item.mediumDescription = love.graphics.newImage("Shop Interface/Shop_Interface__Images/ItemDiscrMed.png")
+    item.largeDescription = love.graphics.newImage("Shop Interface/Shop_Interface__Images/ItemDiscrLarge.png")
+    item.medicalHerbsDescription = love.graphics.newImage("Shop Interface/Shop_Interface__Images/ItemDiscrMedicinalH.png")
     item.descriptionImage = item.blankDescriptionImage
 
     item.descriptionX = 30
     item.descriptionY = 280
 
-    item.blankListImage = love.graphics.newImage("ShopInterface/Shop_Interface/ListOfItems.png")
-    item.smallPotionHighlight = love.graphics.newImage("ShopInterface/Shop_Interface/HighlightedOptions/ListOfItemsSmallPotionHighlighted.png")
-    item.mediumPotionHighlight = love.graphics.newImage("ShopInterface/Shop_Interface/HighlightedOptions/ListOfItemsMedPotion-Highlighted.png")
-    item.largePotionHighlight = love.graphics.newImage("ShopInterface/Shop_Interface/HighlightedOptions/ListOfItemsLargePotion-Highlighted.png")
-    item.medicalHerbsHighlight = love.graphics.newImage("ShopInterface/Shop_Interface/HighlightedOptions/ListOfItemsMedici-Highlighted.png")
+    item.blankListImage = love.graphics.newImage("Shop Interface/Shop_Interface__Images/ListOfItems.png")
+    item.smallPotionHighlight = love.graphics.newImage("Shop Interface/Shop_Interface__Images/HighlightedOptions/ListOfItemsSmallPotionHighlighted.png")
+    item.mediumPotionHighlight = love.graphics.newImage("Shop Interface/Shop_Interface__Images/HighlightedOptions/ListOfItemsMedPotion-Highlighted.png")
+    item.largePotionHighlight = love.graphics.newImage("Shop Interface/Shop_Interface__Images/HighlightedOptions/ListOfItemsLargePotion-Highlighted.png")
+    item.medicalHerbsHighlight = love.graphics.newImage("Shop Interface/Shop_Interface__Images/HighlightedOptions/ListOfItemsMedici-Highlighted.png")
     item.listImage = item.blankListImage
 
-    item.blankImage = love.graphics.newImage("ShopInterface/Shop_Interface/ItemPicture.png")
-    item.smallPotionImage = love.graphics.newImage("ShopInterface/Shop_Interface/SmallPotionPicture.png")
-    item.mediumPotionImage = love.graphics.newImage("ShopInterface/Shop_Interface/MediumPotionPicture.png")
-    item.largePotionImage = love.graphics.newImage("ShopInterface/Shop_Interface/LargePotionPicture.png")
-    item.medicalHerbsImage = love.graphics.newImage("ShopInterface/Shop_Interface/MedicinalHerbsPicture.png")
+    item.blankImage = love.graphics.newImage("Shop Interface/Shop_Interface__Images/ItemPicture.png")
+    item.smallPotionImage = love.graphics.newImage("Shop Interface/Shop_Interface__Images/SmallPotionPicture.png")
+    item.mediumPotionImage = love.graphics.newImage("Shop Interface/Shop_Interface__Images/MediumPotionPicture.png")
+    item.largePotionImage = love.graphics.newImage("Shop Interface/Shop_Interface__Images/LargePotionPicture.png")
+    item.medicalHerbsImage = love.graphics.newImage("Shop Interface/Shop_Interface__Images/MedicinalHerbsPicture.png")
     item.image = item.blankImage
 
     item.listX = 450

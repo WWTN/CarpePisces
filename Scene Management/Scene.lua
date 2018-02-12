@@ -8,6 +8,8 @@ function SceneLoad()
     MainSceneLoad()
     SceneButtonsLoad()
     MiniMapLoad()
+    doorClicked = false
+    
 end
 
 function SceneUpdate()

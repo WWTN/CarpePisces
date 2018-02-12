@@ -1,16 +1,16 @@
-require "Items List"
+require "Shop Interface/Items List"
 require "Player"
 
 function ShopLoad()
     ItemLoad()
     
     shop = {}
-    shop.sellButton = love.graphics.newImage("ShopInterface/Buttons/Sell Button.png")
-    shop.sellButtonHighlight = love.graphics.newImage("ShopInterface/Buttons/Sell Button Highlight.png")
-    shop.purchaseButton = love.graphics.newImage("ShopInterface/Buttons/PurchaseButton.png")
-    shop.purchaseButtonHighlight = love.graphics.newImage("ShopInterface/Buttons/Purchase Button Highlight.png")
-    shop.exitButton = love.graphics.newImage("ShopInterface/Buttons/Exit Button.png")
-    shop.exitButtonHighlight = love.graphics.newImage("ShopInterface/Buttons/Exit Button Highlight.png")
+    shop.sellButton = love.graphics.newImage("Shop Interface/Buttons/Sell Button.png")
+    shop.sellButtonHighlight = love.graphics.newImage("Shop Interface/Buttons/Sell Button Highlight.png")
+    shop.purchaseButton = love.graphics.newImage("Shop Interface/Buttons/PurchaseButton.png")
+    shop.purchaseButtonHighlight = love.graphics.newImage("Shop Interface/Buttons/Purchase Button Highlight.png")
+    shop.exitButton = love.graphics.newImage("Shop Interface/Buttons/Exit Button.png")
+    shop.exitButtonHighlight = love.graphics.newImage("Shop Interface/Buttons/Exit Button Highlight.png")
 
     shop.sellHighlight = false
     shop.purchaseHighlight = false
