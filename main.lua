@@ -1,19 +1,64 @@
-require "Shop Menu"
-require "Scene Management/Scene"
+--require "Shop Menu"
+--require "Scene Management/Scene"
+require("Scene Management/GameState")
+require("Scene Management/State")
+
+require("Game States/MainMenu")
+require("Game States/GameOver")
 
 function love.load()
-    currency = '¬'
+    --[[currency = '¬'
     PlayerLoad()
     SceneLoad()
-    ShopLoad()
+    ShopLoad()]]--
+
+    states = GameState.Create(1)
+
+    -- Main Menu (1)
+    states:AddState(State.Create("Main Menu", MainMenu.Create()))
+
+    -- Game Over (2)
+    states:AddState(State.Create("Game Over", GameOver.Create()))
+
+    -- Game (3)
+    --states.AddState(State.Create("Game", Game.Create()))
 end
 
-function love.keyreleased(key)
+
+
+function love.update()
+    states:Update(dt)
+ --[[ShopUpdate()
+   PlayerUpdate()
+   SceneUpdate()]]--
+end
+
+function love.draw()
+    states:Draw()
+    --love.graphics.setBackgroundColor(128,128,208,255)
+
+    --[[if shopOpen == true then
+        ShopDraw()
+    else
+        SceneDraw()
+    end
+    PlayerDraw()
+    love.graphics.setBackgroundColor(52,46,58,16)]]--
+end
+
+function love.keypressed(key)
     if key == "escape" then
         love.event.quit()
     end
-end
 
+    if key == "1" then
+        states:ChangeState(1)
+    end
+
+    if key == "2" then
+        states:ChangeState(2)
+    end
+end
 
 function love.mousereleased(x, y, button)
     if button == 1 then
@@ -47,21 +92,7 @@ function love.mousereleased(x, y, button)
     end
 end
 
-function love.update()
-   ShopUpdate()
-   PlayerUpdate()
-   SceneUpdate()
-end
 
-function love.draw()
-    --love.graphics.setBackgroundColor(128,128,208,255)
 
-    if shopOpen == true then
-        ShopDraw()
-    else
-        SceneDraw()
-    end
-    PlayerDraw()
-    love.graphics.setBackgroundColor(52,46,58,16)
-end
+
 

@@ -1,4 +1,4 @@
-require "Items List"
+require "Items"
 require "Player"
 
 function ShopLoad()
