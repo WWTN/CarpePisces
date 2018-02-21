@@ -10,7 +10,7 @@ Sprite = require "Interface/sprite"
 Button = require "Interface/button"
 Input = require "Interface/input"
 
-
+Asset = require("Interface/asset")()
 Mouse = require("Interface/mouse")()
 Key = Input()
 
