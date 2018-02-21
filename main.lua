@@ -1,16 +1,22 @@
 --require "Shop Menu"
 --require "Scene Management/Scene"
+local base = require("Interface/interface")
+local libs = require("lib/libs")
 require("Scene Management/GameState")
 require("Scene Management/State")
 
 require("Game States/MainMenu")
 require("Game States/GameOver")
+require("Game States/Shop")
 
 function love.load()
     --[[currency = '¬'
     PlayerLoad()
     SceneLoad()
     ShopLoad()]]--
+
+    mouseStartY = 0
+    mouseEndY = 0
 
     states = GameState.Create(1)
 
@@ -21,7 +27,9 @@ function love.load()
     states:AddState(State.Create("Game Over", GameOver.Create()))
 
     -- Game (3)
-    --states.AddState(State.Create("Game", Game.Create()))
+    states:AddState(State.Create("Shop", Shop.Create()))
+
+    libs.update(dt)
 end
 
 
@@ -34,6 +42,7 @@ function love.update()
 end
 
 function love.draw()
+    love.graphics.scale(SCALE)
     states:Draw()
     --love.graphics.setBackgroundColor(128,128,208,255)
 
@@ -47,6 +56,7 @@ function love.draw()
 end
 
 function love.keypressed(key)
+    base.keypressed(key)
     if key == "escape" then
         love.event.quit()
     end
@@ -58,9 +68,25 @@ function love.keypressed(key)
     if key == "2" then
         states:ChangeState(2)
     end
+
+    if key == "3" then
+        states:ChangeState(3)
+    end
+end
+
+function love.keyreleased(key)
+    base.keyreleased(key)
+end
+
+function love.mousepressed(x, y, button)
+    base.mousepressed(x, y, button)
 end
 
 function love.mousereleased(x, y, button)
+    base.mousereleased(x, y, button)
+end 
+
+--[[function love.mousereleased(x, y, button)
     if button == 1 then
         if shop.purchaseHighlight == true and player.money ~= 0 then 
             if item.smallPotionSelected == true then
@@ -90,7 +116,7 @@ function love.mousereleased(x, y, button)
             shopOpen = true
         end
     end
-end
+end]]--
 
 
 
