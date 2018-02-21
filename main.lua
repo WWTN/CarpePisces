@@ -8,6 +8,7 @@ require("Scene Management/State")
 require("Game States/MainMenu")
 require("Game States/GameOver")
 require("Game States/Shop")
+require("Game States/Test")
 
 function love.load()
     --[[currency = '¬'
@@ -29,12 +30,16 @@ function love.load()
     -- Game (3)
     states:AddState(State.Create("Shop", Shop.Create()))
 
+    -- Test(4)
+    states:AddState(State.Create("Test", Test.Create()))
+
     libs.update(dt)
 end
 
 
 
 function love.update()
+    require("lib/lovebird").update()
     states:Update(dt)
  --[[ShopUpdate()
    PlayerUpdate()
@@ -71,6 +76,10 @@ function love.keypressed(key)
 
     if key == "3" then
         states:ChangeState(3)
+    end
+
+    if key == "4" then
+        states:ChangeState(4)
     end
 end
 

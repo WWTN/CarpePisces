@@ -1,5 +1,4 @@
-require("Interface/Collision")
-
+require("Interface/interface")
 Shop = {}
 Shop.__index = Shop
 
@@ -12,7 +11,8 @@ function Shop.Create()
 end
 
 function Shop:Load()
-    self.sellButton = love.graphics.newImage("ShopInterface/Buttons/Sell Button.png")
+    --self.sellButtonH = Button.setImage("ShopInterface/Buttons/Sell Button.png", 50, 50, 1)
+    --[[self.sellButton = love.graphics.newImage("ShopInterface/Buttons/Sell Button.png")
     self.sellButtonH = love.graphics.newImage("ShopInterface/Buttons/Sell Button Highlight.png")
     self.purchaseButton = love.graphics.newImage("ShopInterface/Buttons/PurchaseButton.png")
     self.purchaseButtonH = love.graphics.newImage("ShopInterface/Buttons/Purchase Button Highlight.png")
@@ -30,7 +30,7 @@ function Shop:Load()
     self.purchaseButtonY = 475
 
     self.exitButtonX = 30
-    self.exitButtonY = 560
+    self.exitButtonY = 560]]--
 end
 
 function Shop:Unload()
@@ -42,11 +42,12 @@ function Shop:Update()
 end
 
 function Shop:Draw()
-    love.graphics.print("This is the shop", 50, 50)
+    
+    --[[love.graphics.print("This is the shop", 50, 50)
     love.graphics.draw(self.sellButton, self.sellButtonX, self.SellButtonY, 0, 0.5, 0.5)
-
     love.graphics.draw(self.purchaseButton, self.purchaseButtonX, self.purchaseButtonY, 0, 0.5, 0.5)
-
+    love.graphics.draw(self.sellButtonH, self.sellButtonX, self.sellButtonY, 0, 0.5, 0.5)
+    ]]--
 end
 
 function Shop:mousepressed(x, y, button)

@@ -9,11 +9,11 @@ Circle = require "Interface/circle"
 Sprite = require "Interface/sprite"
 Button = require "Interface/button"
 Input = require "Interface/input"
-Mouse = require "Interface/mouse"
 
 
-
+Mouse = require("Interface/mouse")()
 Key = Input()
+
 
 Cursors = {}
 Cursors.hand = love.mouse.getSystemCursor("hand")

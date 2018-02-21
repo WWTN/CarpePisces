@@ -5,7 +5,7 @@ Mouse:implement(Point)
 function Mouse:new()
     Mouse.super.new(self)
     self.x = love.mouse.getX()
-    self.y = love.mouse.GetY()
+    self.y = love.mouse.getY()
     self.cursor = nil
 end 
 
@@ -46,7 +46,7 @@ function Mouse:release()
 end
 
 function Mouse:__tostring()
-    return "Mouse | x: " .. self.x .. ", y: " .. self.GetY
+    return "Mouse | x: " .. self.x .. ", y: " .. self.y
 end
 
 return Mouse
