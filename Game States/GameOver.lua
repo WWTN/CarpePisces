@@ -5,6 +5,7 @@ function GameOver.Create()
     local self = {}
     setmetatable(self, GameOver)
     return self
+    
 end
 
 function GameOver:Load()
