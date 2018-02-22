@@ -4,7 +4,7 @@ local Asset = Object:extend()
 
 local function stripString(base, s)
     local a = s:sub(base:len()+2,s:len())
-    return a:sub(0, a:find("%s.")-1)
+    return a:sub(0, a:find("%.")-1)
 end 
 
 local function loadFiles(base, dir, files)
@@ -29,7 +29,7 @@ function Asset:new()
     self.fontCache = {}
     self.audioCache = {}
 
-    self.imageDirs = loadFiles("assets/images", nil, {})
+    self.imgDirs = loadFiles("assets", nil, {})
     self.audioDirs = loadFiles("assets/audio", nil, {})
     self.fontDirs = loadFiles("assets/fonts", nil, {})
 end

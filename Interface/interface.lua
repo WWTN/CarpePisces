@@ -7,8 +7,11 @@ Point = require "Interface/point"
 Rect = require "Interface/rect"
 Circle = require "Interface/circle"
 Sprite = require "Interface/sprite"
+Animation = require "Interface/animation"
+Text = require "Interface/text"
 Button = require "Interface/button"
 Input = require "Interface/input"
+Once = require "Interface/once"
 
 Asset = require("Interface/asset")()
 Mouse = require("Interface/mouse")()
