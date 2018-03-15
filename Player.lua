@@ -20,6 +20,11 @@ function PlayerLoad()
     player.hasSanity = true
     player.hasFlowers = false
     
+    --flags for visited locations
+    player.hasSeenDarkArea = false
+    player.hasSeenStatue = false
+    
+    
 end
 
 function PlayerUpdate()
