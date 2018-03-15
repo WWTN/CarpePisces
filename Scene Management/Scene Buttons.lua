@@ -15,7 +15,6 @@ function SceneButtonsLoad()
 
     shopOpen = false 
 end
-function
 
 function SceneButtonsDraw()
     for i = 0, 2 do
