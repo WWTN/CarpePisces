@@ -10,6 +10,16 @@ function PlayerLoad()
     player.moneyPosX = 830
     player.moneyPosY = 200
     player.isAlive = true
+    
+    --Flags for held items
+    player.hasBatteries = false
+    player.hasLamp = false
+    player.hasMirror = false
+    player.hasKey1 = false
+    player.hasKey2 = false
+    player.hasSanity = true
+    player.hasFlowers = false
+    
 end
 
 function PlayerUpdate()
